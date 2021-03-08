@@ -1,0 +1,23 @@
+#container-login {
+    margin: 80px;
+    padding: 40px;
+    background-image: url("1573497171_487815_1573497337_sumario_grande.jpg");
+    background-position: center;
+}
+
+#navbarwsp {
+    background-color: #254242;
+}
+
+#navcierre {
+    background-color: #254242;
+}
+
+.container {
+    color: white;
+}
+
+#derechos {
+    text-align: center;
+    margin: auto;
+}

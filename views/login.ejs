@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whatsapp</title>
+  <link rel="stylesheet" href="static/estilos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/toastr.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  <script src="static/toastr.min.js"></script>
+</head>
+<body>
+
+  <nav id="navbarwsp" class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">
+      <img src="static\WhatsApp_logo.png" width="250" height="120" class="d-inline-block align-top" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <h2 class="text-white offset-2" >Bienvenido a la Sala de Chat</h2>
+  </nav>
+
+  <div class="container" id="container-login">
+    <div class="row offset-1">
+      <form id="form-register" action="/register" method="POST" class="col s6">
+        <h4 class="text-white">Registrese para ingresar a la plataforma</h4>
+        <div class="row">
+          <div class="col">
+            <input id="name" name="name" type="text" class="validate" placeholder="Nombre">
+            <label for="name">Nombre</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <input id="email" name="email" type="email" class="validate" placeholder="Email" required>
+            <label for="email">Email</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <input id="password" name="password" minlegth="6" type="password" class="validate" placeholder="Contraseña" required>
+            <label for="password">Contraseña</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <input id="password_confirm" name="password_confirm" type="password" class="validate" placeholder="Confirmar contraseña" required>
+            <label for="password_confirm">Confirme Contraseña</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <input type="submit" class="">
+          </div>
+        </div>
+      </form>
+      <form id="form-login" action="/login" method="POST" class="col">
+            <h4>Ingrese a la plataforma</h4>
+            <div class="row">
+              <div class="col">
+                <input name="email" type="email" class="validate" placeholder="Coloque aquí su email" required>
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <input name="password" type="password" class="validate" placeholder="Coloque aquí su contraseña" required>
+                <label for="password">Contraseña</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <input type="submit" class="">
+              </div>
+            </div>
+          </form>
+    </div>
+  </div>
+
+
+  <nav id="navcierre" class="navbar navbar-dark">
+    <a id="derechos" class="navbar-brand" href="#">
+      <span width="30" height="30">WhatsAPP Coding — Todos los derechos reservados 1999 - 2021</span>
+    </a>
+  </nav>
+
+  <script>
+    // Acá mostramos todos los posibles errores de los formularios
+    $(document).ready(function() {
+      
+      toastr["info"]("Hola :)")
+
+      <% for (var error of errors) { %>
+      toastr.error('<%=error%>');
+      <% } %>
+
+      $('#form-register').on('submit', function (){
+        console.log("Llegué");
+        const pass1= $('#password').val()
+        const pass2= $('#password_confirm').val()
+        if (pass1 != pass2) {
+          toastr.error("Ambas contraseñas deben ser similares");
+          return false;
+        }
+      })
+
+    });
+
+
+
+
+
+  </script>
+</body>
+</html>
